@@ -326,7 +326,7 @@ g.selected path {
                     .overlayGeoJson(governJSON.features, "cname", function (d) {
                         return d.properties.cname;
                     })
-                    .projection(d3.geo.mercator().center([0,0]).scale(600)) /* Center on Jordan */
+                    .projection(d3.geo.mercator().center([58,29]).scale(600)) /* Center on Jordan */
 					.title(function (d) {
                         return "Geo-Filter: " + d.key;
                     });
