@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+.container{
+	padding: 0px;
+	margin:0px;
+	height:80%;
+	width: 100%;
+}
+
+.col-md-4{
+	float: left;
+	height: 100%;
+}
+.col-md-4{
+	float: right;
+	height: 100%;
+}
