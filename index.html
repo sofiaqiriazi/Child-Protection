@@ -61,7 +61,7 @@ g.selected path {
         <div class="col-xs-12">
 		The RMRP is co-led by the United Nations High Commissioner for Refugees (UNHCR) and the International Organization for Migration (IOM), bringing together more than 60 UN agencies and NGOs under one consolidated plan for the refugee and migrant crisis affecting Southern Europe and the Western Balkans.
         <br> <strong>All charts are based on USD values appealed. Click on any of the graphs below to filter and slice the data.</strong>
-            For more information on the RMRP, click here  <a href="http://data.unhcr.org/mediterranean/regional.php" target="_blank">here</a>.<br>
+            For more information on the RMRP, dataunhcr.org<br>
             </div>
 
         <div class="row">
@@ -327,7 +327,7 @@ g.selected path {
                     .overlayGeoJson(governJSON.features, "cname", function (d) {
                         return d.properties.cname;
                     })
-                    .projection(d3.geo.mercator().center([46,15]).scale(400)) /* Center on Jordan */
+                    .projection(d3.geo.mercator().center([46,10]).scale(400)) /* Center on Jordan */
 					.title(function (d) {
                         return "Geo-Filter: " + d.key;
                     });
