@@ -85,6 +85,7 @@ g.selected path {
                         <h5><strong>By Sectors / Working Groups</strong></h5>
                     </div>
                 </div>
+				
                 <div style="position:relative;top:180;left:20px; width:700px">
 				<strong>
 				<BR>
@@ -326,7 +327,7 @@ g.selected path {
                     .overlayGeoJson(governJSON.features, "cname", function (d) {
                         return d.properties.cname;
                     })
-                    .projection(d3.geo.mercator().center([46,16]).scale(400)) /* Center on Jordan */
+                    .projection(d3.geo.mercator().center([46,15]).scale(400)) /* Center on Jordan */
 					.title(function (d) {
                         return "Geo-Filter: " + d.key;
                     });
