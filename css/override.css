@@ -12,10 +12,15 @@ h1 {
 	height:80%;
 	width: 100%;
 }
-.block{
+.block1{
 	width: 100%;
-	height: 50%;
+	height: 60%;
 }
+.block2{
+	width: 100%;
+	height: 40%;
+}
+
 .col-md-4{
 	float: left;
 	height: 100%;
