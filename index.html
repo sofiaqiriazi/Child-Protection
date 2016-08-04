@@ -61,20 +61,20 @@ g.selected path {
                 	<img src="images/coordination.png" style="height: 48px; width: 48px"></a>
         <strong>REGIONAL REFUGEE AND MIGRANT RESPONSE PLAN (RMRP) 2016</strong></h2>
 				<div class = "block1">
-			        <div id="map2" class="col-xs-12 col-md-8 dc-chart" data-step="4" data-intro="Or click on this map to filter by area of operation." data-position="right">
+			        <div id="map2" class="col-xs-12 col-md-4 dc-chart" data-step="4" data-intro="Or click on this map to filter by area of operation." data-position="right">
                         <h5><strong>Filter on the Map </strong><small>by Country</small></h5>
 
                     </div>
-					<div id="area" class="col-xs-12 col-md-8 dc-chart" data-step="5" data-intro="Click on this row chart to filter by area of operation." data-position="right">
+					<div id="area" class="col-xs-12 col-md-4 dc-chart" data-step="5" data-intro="Click on this row chart to filter by area of operation." data-position="right">
                         <h5><strong>Top Countries </strong><small>by Country</small></h5>
 
                     </div>
 				</div>
 				<div class = "block2">
-					<div id="sector" class="col-xs-12 col-md-8 dc-chart" data-step="2" data-intro="Click on this row chart chart to filter by sector." data-position="right">
+					<div id="sector" class="col-xs-12 col-md-4 dc-chart" data-step="2" data-intro="Click on this row chart chart to filter by sector." data-position="right">
                         <h5><strong>By Sectors / Working Groups</strong></h5>
                     </div>
-					<div id="orgs" class="col-xs-12 col-md-8 dc-chart" data-step="6" data-intro="Click on this row chart to filter by partner." data-position="left">
+					<div id="orgs" class="col-xs-12 col-md-4 dc-chart" data-step="6" data-intro="Click on this row chart to filter by partner." data-position="left">
                         <h5><strong>Top 20 Partners </strong><small>by Appeal. Scroll down for Partners filter.</small></h5>
                     </div>
 				</div>
@@ -220,7 +220,7 @@ g.selected path {
                 .elasticX(true)
                 .on("filtered", getFiltersValues)
                 .data(function(group) {
-                    return group.top(10);
+                    return group.top(20);
                 })
                 .colors(['#A9DDA9'])
                 .colorDomain([0,0])
@@ -233,7 +233,7 @@ g.selected path {
                 .elasticX(true)
                 .on("filtered", getFiltersValues)
                 .data(function(group) {
-                    return group.top(10);
+                    return group.top(20);
                 })
                 .colors(['#3182bd'])
                 .colorDomain([0,0])
