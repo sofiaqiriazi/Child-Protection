@@ -65,7 +65,7 @@ g.selected path {
                         <h5><strong>Filter on the Map </strong><small>by Country</small></h5>
 
                     </div>
-					<div id="area" class="col-xs-12 col-md-4 dc-chart" data-step="5" data-intro="Click on this row chart to filter by area of operation." data-position="right">
+					<div id="area" class="col-xs-12 col-md-8 dc-chart" data-step="5" data-intro="Click on this row chart to filter by area of operation." data-position="right">
                         <h5><strong>Top Countries </strong><small>by Country</small></h5>
 
                     </div>
@@ -74,7 +74,7 @@ g.selected path {
 					<div id="sector" class="col-xs-12 col-md-8 dc-chart" data-step="2" data-intro="Click on this row chart chart to filter by sector." data-position="right">
                         <h5><strong>By Sectors / Working Groups</strong></h5>
                     </div>
-					<div id="orgs" class="col-xs-12 col-md-4 dc-chart" data-step="6" data-intro="Click on this row chart to filter by partner." data-position="left">
+					<div id="orgs" class="col-xs-12 col-md-8 dc-chart" data-step="6" data-intro="Click on this row chart to filter by partner." data-position="left">
                         <h5><strong>Top 20 Partners </strong><small>by Appeal. Scroll down for Partners filter.</small></h5>
                     </div>
 				</div>
@@ -199,7 +199,7 @@ g.selected path {
 
 
              /* 3W data are sorted per sector and color are allocated to sectors as per standard code in rrp6 */
-            sector_chart.width(400).height(300)
+            sector_chart.width(500).height(500)
                 .dimension(cf.sector)
                 .group(sectorByTotal)
                 .elasticX(true)
@@ -214,7 +214,7 @@ g.selected path {
                 .xAxis().ticks(4).tickFormat(d3.format("s"));
 
 
-            area_chart.width(400).height(220)
+            area_chart.width(500).height(500)
                 .dimension(cf.area)
                 .group(areaByTotal)
                 .elasticX(true)
@@ -227,7 +227,7 @@ g.selected path {
                 .colorAccessor(function(d, i){return 1;})
                 .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-            org_chart.width(450).height(570)
+            org_chart.width(500).height(500)
                 .dimension(cf.agency)
                 .group(agencyByTotal)
                 .elasticX(true)
