@@ -246,13 +246,13 @@ g.selected path {
 
                  map2_chart.width(700).height(500)
                     .dimension(cf.ccode)
-                    .group(ccodeByTotal)
-                    .colors(['#FFFFFF', "rgb(49,163,84)"]) //'#CB181D'
+                    .group(sectorByTotal)
+                    .colors(['#ccc', '#E2F2FF', '#C4E4FF', '#9ED2FF', '#81C5FF', '#6BBAFF', '#51AEFF', '#36A2FF', '#1E96FF', '#0089FF']) //'#CB181D'
                     .colorDomain([0, 2])
                     .overlayGeoJson(governJSON.features, "cname", function (d) {
                         return d.properties.cname;
                     })
-                    .projection(d3.geo.mercator().center([35,55]).scale(400)) /* Center on Jordan */
+                    .projection(d3.geo.mercator().center([40,55]).scale(400)) /* Center on Jordan */
 					.title(function (d) {
                         return "Geo-Filter: " + d.key;
                     });
@@ -283,7 +283,7 @@ g.selected path {
             var rowTip = d3.tip()
                   .attr('class', 'd3-tip')
                   .offset([-10, 0])
-                  .html(function (d) { return "<span style='color: #f0027f'>" +  d.key + "</span> : "  + numberFormat(d.value) + " USD"; });
+                  .html(function (d) { return "<span style='color: #f0027f'>" +  d.key + "</span> : "  + numberFormat(d.value) + " Activities "; });
 
 
 	                    d3.selectAll("g.row").call(rowTip);
