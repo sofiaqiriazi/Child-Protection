@@ -235,7 +235,7 @@ g.selected path {
                 .data(function(group) {
                     return group.top(20);
                 })
-                .colors(['#3182bd'])
+                .colors(['ç'])
                 .colorDomain([0,0])
                 .colorAccessor(function(d, i){return 1;})
                 .xAxis().ticks(4).tickFormat(d3.format("s"));
@@ -247,8 +247,8 @@ g.selected path {
                  map2_chart.width(700).height(500)
                     .dimension(cf.ccode)
                     .group(ccodeByTotal)
-                    .colors(['#ccc', '#E2F2FF', '#C4E4FF', '#9ED2FF', '#81C5FF', '#6BBAFF', '#51AEFF', '#36A2FF', '#1E96FF', '#0089FF']) //'#CB181D'
-                    .colorDomain([0, 9])
+                    .colors(['#ffffff', '#E2F2FF', '#C4E4FF', '#9ED2FF', '#81C5FF', '#6BBAFF', '#51AEFF', '#36A2FF', '#1E96FF', '#0089FF']) //'#CB181D'
+                    .colorDomain([0, 155])
                     .overlayGeoJson(governJSON.features, "cname", function (d) {
                         return d.properties.cname;
                     })
