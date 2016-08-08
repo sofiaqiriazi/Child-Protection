@@ -185,7 +185,7 @@ g.selected path {
             var rowTip = d3.tip()
                   .attr('class', 'd3-tip')
                   .offset([-10, 0])
-                  .html(function (d) { return "<span style='color: #f0027f'>" +  d.key + "</span> : "  + numberFormat(d.value) + "Activites"; });
+                  .html(function (d) { return "<span style='color: #f0027f'>" +  d.key + "</span> : "  + numberFormat(d.value) + " Activites"; });
 
 
 
@@ -216,7 +216,6 @@ g.selected path {
                 .colors(['#3182bd'])
                 .colorDomain([0,0])
                 .colorAccessor(function(d, i){return 1;})
-				.margins({top: 0, right: 55, bottom: -1, left: 30})
                 .xAxis().ticks(4).tickFormat(d3.format("s"));
 
 
