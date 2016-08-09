@@ -219,7 +219,7 @@ g.selected path {
                 .xAxis().ticks(4).tickFormat(d3.format("s"));
 
 
-            area_chart.width(500).height(600)
+            area_chart.width(500).height(700)
                 .dimension(cf.area)
                 .group(areaByTotal)
                 .elasticX(true)
@@ -258,7 +258,7 @@ g.selected path {
                     .overlayGeoJson(governJSON.features, "cname", function (d) {
                         return d.properties.cname;
                     })
-                    .projection(d3.geo.mercator().center([58,33]).scale(500)) /* Center on Jordan */
+                    .projection(d3.geo.mercator().center([43,53]).scale(550)) /* Center on Jordan */
 					.title(function (d) {
                         return "Geo-Filter: " + d.key;
                     });
