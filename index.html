@@ -260,8 +260,7 @@ g.selected path {
                     .projection(d3.geo.mercator().center([45,55]).scale(500)) /* Center on Jordan */
 					.title(function (d) {
                         return "Geo-Filter: " + d.key;
-                    });
-
+                    })
                     $('#reset').on('click', function (){
                       dc.filterAll();
                       dc.redrawAll();
