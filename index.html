@@ -249,7 +249,7 @@ g.selected path {
          /* Region map with ID rid */
             d3.json("data/world.geojson", function (governJSON) {
 
-                 map2_chart.width(700).height(600)
+                 map2_chart.width(700).height(700)
                     .dimension(cf.ccode)
                     .group(ccodeByTotal)
                     .colors(['#ffffff', '#E2F2FF', '#C4E4FF', '#9ED2FF', '#81C5FF', '#6BBAFF', '#51AEFF', '#36A2FF', '#1E96FF', '#0089FF']) //'#CB181D'])
@@ -258,7 +258,7 @@ g.selected path {
                     .overlayGeoJson(governJSON.features, "cname", function (d) {
                         return d.properties.cname;
                     })
-                    .projection(d3.geo.mercator().center([30,60]).scale(550)) /* Center on Jordan */
+                    .projection(d3.geo.mercator().center([26,65]).scale(550)) /* Center on Jordan */
 					.title(function (d) {
                         return "Geo-Filter: " + d.key;
                     });
