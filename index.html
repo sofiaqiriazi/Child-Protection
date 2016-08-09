@@ -78,7 +78,7 @@ g.selected path {
                         <h5><strong>By Activites</strong></h5>
                     </div>
 					<div id="orgs" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 dc-chart" data-step="6" data-intro="Click on this row chart to filter by partner." data-position="left">
-                        <h5><strong>Top 20 Partners </strong></h5>
+                        <h5><strong>Top 30 Partners </strong></h5>
                     </div>
 				</div>
                 <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -205,15 +205,15 @@ g.selected path {
 
 
              /* 3W data are sorted per sector and color are allocated to sectors as per standard code in rrp6 */
-            sector_chart.width(500).height(500)
+            sector_chart.width(500).height(700)
                 .dimension(cf.sector)
                 .group(sectorByTotal)
                 .elasticX(true)
                 .on("filtered", getFiltersValues)
                 .data(function(group) {
-                    return group.top(20);
+                    return group.top(30);
                 })
-                .colors(['#3182bd'])
+                .colors(['#71afda'])
                 .colorDomain([0,0])
                 .colorAccessor(function(d, i){return 1;})
                 .xAxis().ticks(4).tickFormat(d3.format("s"));
@@ -232,15 +232,15 @@ g.selected path {
                 .colorAccessor(function(d, i){return 1;})
                 .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-            org_chart.width(500).height(500)
+            org_chart.width(500).height(700)
                 .dimension(cf.agency)
                 .group(agencyByTotal)
                 .elasticX(true)
                 .on("filtered", getFiltersValues)
                 .data(function(group) {
-                    return group.top(20);
+                    return group.top(30);
                 })
-                .colors(['#3182bd'])
+                .colors(['#71afda'])
                 .colorDomain([0,0])
                 .colorAccessor(function(d, i){return 1;})
                 .xAxis().ticks(4).tickFormat(d3.format("s"));
@@ -257,7 +257,7 @@ g.selected path {
                     .overlayGeoJson(governJSON.features, "cname", function (d) {
                         return d.properties.cname;
                     })
-                    .projection(d3.geo.mercator().center([40,55]).scale(400)) /* Center on Jordan */
+                    .projection(d3.geo.mercator().center([45,55]).scale(350)) /* Center on Jordan */
 					.title(function (d) {
                         return "Geo-Filter: " + d.key;
                     });
