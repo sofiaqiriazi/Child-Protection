@@ -254,13 +254,14 @@ g.selected path {
                     .group(ccodeByTotal)
                     .colors(['#ffffff', '#E2F2FF', '#C4E4FF', '#9ED2FF', '#81C5FF', '#6BBAFF', '#51AEFF', '#36A2FF', '#1E96FF', '#0089FF']) //'#CB181D'])
 
-                    .colorDomain([0, 9                    .overlayGeoJson(governJSON.features, "cname", function (d) {
+                    .colorDomain([0,9])
+                    .overlayGeoJson(governJSON.features, "cname", function (d) {
                         return d.properties.cname;
                     })
                     .projection(d3.geo.mercator().center([45,55]).scale(500)) /* Center on Jordan */
 					.title(function (d) {
                         return "Geo-Filter: " + d.key;
-                    })
+                    });
                     $('#reset').on('click', function (){
                       dc.filterAll();
                       dc.redrawAll();
