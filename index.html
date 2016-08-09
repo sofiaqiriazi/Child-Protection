@@ -225,7 +225,7 @@ g.selected path {
                 .elasticX(true)
                 .on("filtered", getFiltersValues)
                 .data(function(group) {
-                    return group.sorted();
+                    return group.top((group.all()).length);
                 })
                 .colors(['#A9DDA9'])
                 .colorDomain([0,0])
