@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/dc.css">
     <link rel="stylesheet" type="text/css" href="css/3w-dashboard.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
     <!-- Add IntroJs styles and JS -->
     <link rel="stylesheet" type="text/css" href="css/introjs.css">
 	<script type="text/javascript" src="js/intro.js"></script>
@@ -62,23 +64,7 @@ g.selected path {
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a>
                 <a class="btn btn btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Tutorial</a>
-				  <div data-role="main" class="ui-content">
-				    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Show Popup Form</a>
-
-				    <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
-				      <form method="post" action="demoform.asp">
-				        <div>
-				          <h3>Please fill in a new form with your data</h3>
-				                 <input type="text" name="user" id="usrnm" placeholder="Country">
-				                 <input type="text" name="user" id="usrnm" placeholder="Partner">
-				                 <input type="text" name="user" id="usrnm" placeholder="Activity">
-				                 <input type="text" name="user" id="usrnm" placeholder="Comments">
-				                 <input type="email" name="email" id="email" placeholder="Email address">
-				                 <input type="submit" data-inline="true" value="Submit Entry">
-				        </div>
-				      </form>
-				    </div>
-				  </div>
+                <a class="entry btn btn-success" id="entry" href="javascript:dc.filterAll();dc.redrawAll();">New Entry</a>
             </div>
 				<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			        <div id="map2" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 dc-chart" data-step="4" data-intro="Or click on this map to filter by area of operation." data-position="right">
