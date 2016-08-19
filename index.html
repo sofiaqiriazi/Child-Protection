@@ -62,8 +62,11 @@ g.selected path {
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a>
                 <a class="btn btn btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Tutorial</a>
-                <a class="entry btn btn-success" id="entry" href="javascript:dc.filterAll();dc.redrawAll();">New Entry</a>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdhm_HWpqsX1HDGs3RiCH9juqYmNI-q0HBgygpbPmOIFwncZA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                <a href="#popupMap" data-rel="popup" data-position-to="window" id="entry" class="btn btn btn-success ui-btn ui-corner-all ui-shadow ui-btn-inline">New Entry</a>
+				<div data-role="popup" id="popupMap" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
+				    <a href="#" data-rel="back" class="btn btn btn-success ui-btn ui-btn-b ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				    <iframe  src="https://docs.google.com/forms/d/e/1FAIpQLSdhm_HWpqsX1HDGs3RiCH9juqYmNI-q0HBgygpbPmOIFwncZA/viewform?embedded=true" width="500" height="300" frameborder="0" marginheight="0" marginwidth="0" seamless="">Loading</iframe>
+				</div>
             </div>
 				<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			        <div id="map2" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 dc-chart" data-step="4" data-intro="Or click on this map to filter by area of operation." data-position="right">
@@ -94,7 +97,7 @@ g.selected path {
     <script type="text/javascript" src="js/crossfilter.js"></script>
     <script type="text/javascript" src="js/dc.js"></script>
     <script type="text/javascript" src="js/d3.js"></script>
-
+ 	 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
  <script>
 
 
@@ -297,6 +300,15 @@ g.selected path {
                     d3.selectAll("g.row").on('mouseover', rowTip.show)
                         .on('mouseout', rowTip.hide);
 				}
+$(document).ready(function () {
+    $("#popupMap").hide();
+    $("#entry").click(function (e) {
+        e.preventDefault();
+
+        $("#popupMap").dialog();
+    });
+});
+
     </script>
     <script src="js/bootstrap.js"></script>
 
