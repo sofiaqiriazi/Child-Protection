@@ -290,7 +290,7 @@ g.selected path {
 
 
              /* 3W data are sorted per sector and color are allocated to sectors as per standard code in rrp6 */
-            sector_chart.width(500).height(700)
+            sector_chart.width(300).height(500)
                 .dimension(cf.sector)
                 .group(sectorByTotal)
                 .elasticX(true)
@@ -304,7 +304,7 @@ g.selected path {
                 .xAxis().ticks(4).tickFormat(d3.format("s"));
 
 
-            area_chart.width(500).height(700)
+            area_chart.width(300).height(500)
                 .dimension(cf.area)
                 .group(areaByTotal)
                 .elasticX(true)
@@ -317,7 +317,7 @@ g.selected path {
                 .colorAccessor(function(d, i){return 1;})
                 .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-            org_chart.width(500).height(700)
+            org_chart.width(300).height(500)
                 .dimension(cf.agency)
                 .group(agencyByTotal)
                 .elasticX(true)
@@ -334,7 +334,7 @@ g.selected path {
          /* Region map with ID rid */
             d3.json("data/world.geojson", function (governJSON) {
 
-                 map2_chart.width(700).height(700)
+                 map2_chart.width(300).height(500)
                     .dimension(cf.ccode)
                     .group(ccodeByTotal)
                     .colors(['#ffffff', '#E2F2FF', '#C4E4FF', '#9ED2FF', '#81C5FF', '#6BBAFF', '#51AEFF', '#36A2FF', '#1E96FF', '#0089FF']) //'#CB181D'])
